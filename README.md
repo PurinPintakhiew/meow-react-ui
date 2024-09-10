@@ -1,4 +1,4 @@
-# meow-react-ui
+# meow-react-ui 🐱
 
 ## Install
 #### Using npm
