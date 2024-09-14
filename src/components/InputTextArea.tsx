@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "../libs/cn";
+import { cn } from "@/libs/cn";
 
 interface InputProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
 

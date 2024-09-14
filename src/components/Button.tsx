@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "../libs/cn";
+import { cn } from "@/libs/cn";
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   severity?: "primary" | "secondary" | "success" | "info" | "warning" | "danger";
 }
