@@ -1,10 +1,10 @@
 {
   "name": "meow-react-ui",
-  "version": "1.0.0",
-  "description": "UI Components",
-  "main": "index.js",
+  "version": "1.0.1",
+  "description": "A react UI component library",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup --config rollup.config.mjs"
   },
   "repository": {
     "type": "git",
@@ -21,8 +21,23 @@
   },
   "homepage": "https://github.com/PurinPintakhiew/meow-react-ui#readme",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@types/react": "^18.3.8",
     "react": "^18.3.1",
+    "rollup": "^3.29.5",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-postcss": "^4.0.2",
     "typescript": "^5.6.2"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "tslib": "^2.7.0"
   }
 }
