@@ -2847,9 +2847,39 @@ if (process.env.NODE_ENV === 'production') {
 var reactExports = react.exports;
 var React = /*@__PURE__*/getDefaultExportFromCjs(reactExports);
 
+function styleInject(css, ref) {
+  if ( ref === void 0 ) ref = {};
+  var insertAt = ref.insertAt;
+
+  if (!css || typeof document === 'undefined') { return; }
+
+  var head = document.head || document.getElementsByTagName('head')[0];
+  var style = document.createElement('style');
+  style.type = 'text/css';
+
+  if (insertAt === 'top') {
+    if (head.firstChild) {
+      head.insertBefore(style, head.firstChild);
+    } else {
+      head.appendChild(style);
+    }
+  } else {
+    head.appendChild(style);
+  }
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+}
+
+var css_248z = ".meow-button {\r\n    width: 5rem;\r\n    padding: 0.5rem;\r\n    border-width: 0.2rem;\r\n    border-radius: 0.375rem;\r\n}";
+styleInject(css_248z);
+
 var Button = function (_a) {
     var label = _a.label, type = _a.type, className = _a.className, children = _a.children, props = __rest(_a, ["label", "type", "className", "children"]);
-    return (React.createElement("button", __assign({ type: type, className: className }, props), label ? label : children));
+    return (React.createElement("button", __assign({ type: type, className: "meow-button " + className }, props), label ? label : children));
 };
 
 exports.Button = Button;
