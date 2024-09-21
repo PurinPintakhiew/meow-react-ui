@@ -1,4 +1,5 @@
 import React from "react";
+import './Button.css'
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   label?: string;
@@ -9,7 +10,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button = ({ label, type, className, children, ...props }: ButtonProps) => {
   return (
-    <button type={type} className={className} {...props}>
+    <button type={type} className={"meow-button " + className} {...props}>
       {label ? label : children}
     </button>
   );
