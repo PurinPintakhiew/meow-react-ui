@@ -1,0 +1,7 @@
+.meow-input-text {
+    border-width: 1px;
+    height: 2rem;
+    --tw-text-opacity: 1 !important;
+    color: rgb(0 0 0 / var(--tw-text-opacity)) /* #000000 */ !important;
+    border-radius: 0.125rem;
+}
