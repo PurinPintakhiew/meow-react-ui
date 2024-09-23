@@ -1,6 +1,6 @@
 {
   "name": "meow-react-ui",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "A react UI component library",
   "type": "module",
   "scripts": {
