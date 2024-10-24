@@ -8,4 +8,12 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 declare const Button: ({ label, type, className, children, ...props }: ButtonProps) => React.JSX.Element;
 
-export { Button };
+interface InputProps$1 extends React.InputHTMLAttributes<HTMLInputElement> {
+}
+declare const InputText: ({ className, ...props }: InputProps$1) => React.JSX.Element;
+
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+}
+declare const InputNumber: ({ className, ...props }: InputProps) => React.JSX.Element;
+
+export { Button, InputNumber, InputText };

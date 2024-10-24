@@ -2874,13 +2874,31 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = ".meow-button {\r\n    width: 5rem;\r\n    padding: 0.5rem;\r\n    border-width: 0.2rem;\r\n    border-radius: 0.375rem;\r\n}";
-styleInject(css_248z);
+var css_248z$2 = ".meow-button {\r\n    width: 5rem;\r\n    padding: 0.25rem;\r\n    border-radius: 0.375rem;\r\n}";
+styleInject(css_248z$2);
 
 var Button = function (_a) {
     var label = _a.label, type = _a.type, className = _a.className, children = _a.children, props = __rest(_a, ["label", "type", "className", "children"]);
     return (React.createElement("button", __assign({ type: type, className: "meow-button " + className }, props), label ? label : children));
 };
 
+var css_248z$1 = ".meow-input-text {\r\n    border-width: 1px;\r\n    height: 2rem;\r\n    --tw-text-opacity: 1 !important;\r\n    color: rgb(0 0 0 / var(--tw-text-opacity)) /* #000000 */ !important;\r\n    border-radius: 0.125rem;\r\n}";
+styleInject(css_248z$1);
+
+var InputText = function (_a) {
+    var className = _a.className, props = __rest(_a, ["className"]);
+    return React.createElement("input", __assign({ type: "text", className: "meow-input-text " + className }, props));
+};
+
+var css_248z = ".meow-input-number {\r\n    border-width: 1px;\r\n    height: 2rem;\r\n    --tw-text-opacity: 1 !important;\r\n    color: rgb(0 0 0 / var(--tw-text-opacity)) /* #000000 */ !important;\r\n    border-radius: 0.125rem;\r\n}";
+styleInject(css_248z);
+
+var InputNumber = function (_a) {
+    var className = _a.className, props = __rest(_a, ["className"]);
+    return React.createElement("input", __assign({ type: "number", className: className }, props));
+};
+
 exports.Button = Button;
+exports.InputNumber = InputNumber;
+exports.InputText = InputText;
 //# sourceMappingURL=index.js.map
